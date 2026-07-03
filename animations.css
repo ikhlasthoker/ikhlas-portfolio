@@ -1,0 +1,143 @@
+/* ==========================================================================
+   IKHLAS HASSAN — PREMIUM PORTFOLIO
+   animations.css — Keyframes & animation utility classes
+   ========================================================================== */
+
+/* ---------- Loader ---------- */
+@keyframes loaderFill{
+  0%{ width:0%; }
+  60%{ width: 75%; }
+  100%{ width: 100%; }
+}
+@keyframes pulseGlow{
+  0%, 100%{ opacity:1; transform: scale(1); }
+  50%{ opacity:0.7; transform: scale(1.05); }
+}
+@keyframes dotBlink{
+  0%, 100%{ opacity:0; }
+  50%{ opacity:1; }
+}
+
+/* ---------- Hero ---------- */
+@keyframes waveHand{
+  0%, 100%{ transform: rotate(0deg); }
+  15%{ transform: rotate(18deg); }
+  30%{ transform: rotate(-10deg); }
+  45%{ transform: rotate(18deg); }
+  60%{ transform: rotate(0deg); }
+}
+@keyframes blinkCursor{
+  0%, 100%{ opacity:1; }
+  50%{ opacity:0; }
+}
+@keyframes spinSlow{
+  from{ transform: rotate(0deg); }
+  to{ transform: rotate(360deg); }
+}
+@keyframes floatIcon{
+  0%, 100%{ transform: translateY(0px); }
+  50%{ transform: translateY(-14px); }
+}
+@keyframes pulseDot{
+  0%, 100%{ box-shadow: 0 0 0 0 rgba(34,197,94,0.55); }
+  50%{ box-shadow: 0 0 0 6px rgba(34,197,94,0); }
+}
+@keyframes bounceHint{
+  0%, 100%{ transform: translate(-50%, 0); opacity:0.6; }
+  50%{ transform: translate(-50%, 8px); opacity:1; }
+}
+
+/* ---------- Background blobs ---------- */
+@keyframes blobFloat1{
+  0%, 100%{ transform: translate(0,0) scale(1); }
+  33%{ transform: translate(6%, 8%) scale(1.1); }
+  66%{ transform: translate(-4%, 4%) scale(0.95); }
+}
+@keyframes blobFloat2{
+  0%, 100%{ transform: translate(0,0) scale(1); }
+  33%{ transform: translate(-8%, 6%) scale(1.08); }
+  66%{ transform: translate(4%, -6%) scale(0.92); }
+}
+@keyframes blobFloat3{
+  0%, 100%{ transform: translate(0,0) scale(1); }
+  33%{ transform: translate(5%, -8%) scale(1.05); }
+  66%{ transform: translate(-6%, 3%) scale(0.98); }
+}
+
+/* ---------- Glass shine sweep ---------- */
+@keyframes shineSweep{
+  0%{ background-position: 120% 0%; }
+  100%{ background-position: -20% 0%; }
+}
+
+/* ---------- Liquid glass conic border rotation ---------- */
+@keyframes conicRotate{
+  0%{ filter: hue-rotate(0deg); }
+  100%{ filter: hue-rotate(360deg); }
+}
+
+/* ---------- Icon pulsing glow (info/service cards) ---------- */
+@keyframes iconPulseGlow{
+  0%, 100%{ box-shadow: 0 0 20px rgba(139,92,246,0.35); transform: scale(1); }
+  50%{ box-shadow: 0 0 32px rgba(139,92,246,0.6); transform: scale(1.04); }
+}
+
+/* ---------- Section-local floating color orbs ---------- */
+@keyframes orbDrift1{
+  0%, 100%{ transform: translate(0,0) scale(1); }
+  50%{ transform: translate(60px, 40px) scale(1.2); }
+}
+@keyframes orbDrift2{
+  0%, 100%{ transform: translate(0,0) scale(1); }
+  50%{ transform: translate(-50px, -30px) scale(1.15); }
+}
+@keyframes orbDrift3{
+  0%, 100%{ transform: translate(0,0) scale(1); }
+  50%{ transform: translate(-40px, 50px) scale(0.9); }
+}
+
+/* ---------- Telegram button plane flight ---------- */
+@keyframes planeFly{
+  0%{ transform: translate(0,0) rotate(0deg); opacity:1; }
+  40%{ transform: translate(6px,-4px) rotate(8deg); opacity:1; }
+  60%{ transform: translate(14px,-9px) rotate(8deg); opacity:0; }
+  61%{ transform: translate(-8px,6px) rotate(-4deg); opacity:0; }
+  100%{ transform: translate(0,0) rotate(0deg); opacity:1; }
+}
+
+/* ---------- Button ripple ---------- */
+@keyframes rippleAnim{
+  to{ transform: scale(4); opacity:0; }
+}
+
+/* ---------- Generic scroll reveal (fallback / used alongside AOS) ---------- */
+.reveal{
+  opacity:0;
+  transform: translateY(40px);
+  transition: opacity 0.8s var(--ease), transform 0.8s var(--ease);
+}
+.reveal.in-view{
+  opacity:1;
+  transform: translateY(0);
+}
+
+/* ---------- Gradient text animation (subtle shimmer) ---------- */
+.gradient-text{
+  background-size: 200% 200%;
+  animation: gradientShift 6s ease infinite;
+}
+@keyframes gradientShift{
+  0%{ background-position: 0% 50%; }
+  50%{ background-position: 100% 50%; }
+  100%{ background-position: 0% 50%; }
+}
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce){
+  *, *::before, *::after{
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
