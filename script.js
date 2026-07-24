@@ -275,37 +275,37 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ============================================================
      12. CONTACT FORM (front-end only demo handling)
   ============================================================ */
-   const name = document.getElementById('name').value.trim();
-  const email = document.getElementById('email').value.trim();
-  const subject = document.getElementById('subject').value.trim();
-  const message = document.getElementById('message').value.trim();
+  // const name = document.getElementById('name').value.trim();
+ // const email = document.getElementById('email').value.trim();
+ // const subject = document.getElementById('subject').value.trim();
+ // const message = document.getElementById('message').value.trim();
+//
+//  const submitBtn = contactForm.querySelector('button[type="submit"]');
+//  const originalBtnHTML = submitBtn.innerHTML;
+//  submitBtn.disabled = true;
+ // submitBtn.innerHTML = '<span>Sending...</span>';
+//
+ // try {
+ //   const { error } = await supabaseClient
+    //  .from('messages')
+    //  .insert([{ name, email, subject, message }]);
+//
+  //  if (error) throw error;
 
-  const submitBtn = contactForm.querySelector('button[type="submit"]');
-  const originalBtnHTML = submitBtn.innerHTML;
-  submitBtn.disabled = true;
-  submitBtn.innerHTML = '<span>Sending...</span>';
-
-  try {
-    const { error } = await supabaseClient
-      .from('messages')
-      .insert([{ name, email, subject, message }]);
-
-    if (error) throw error;
-
-    formNote.textContent = `Thanks ${name || 'there'} — your message has been sent successfully!`;
-    formNote.style.color = '#4ade80';
-    contactForm.reset();
-  } catch (err) {
-    console.error('Contact form error:', err);
-    formNote.textContent = 'Something went wrong sending your message. Please try again or reach out via Telegram.';
-    formNote.style.color = '#f87171';
-  } finally {
-    submitBtn.disabled = false;
-    submitBtn.innerHTML = originalBtnHTML;
-    setTimeout(() => { formNote.textContent = ''; }, 7000);
-  }
-});
-
+//    formNote.textContent = `Thanks ${name || 'there'} — your message has been sent successfully!`;
+ //   formNote.style.color = '#4ade80';
+  //  contactForm.reset();
+//  } catch (err) {
+  //  console.error('Contact form error:', err);
+ //   formNote.textContent = 'Something went wrong sending your message. Please try again or reach out via Telegram.';
+ //   formNote.style.color = '#f87171';
+//  } finally {
+ //   submitBtn.disabled = false;
+ //   submitBtn.innerHTML = originalBtnHTML;
+ //   setTimeout(() => { formNote.textContent = ''; }, 7000);
+//  }
+//});
+//
 (async function trackVisit() {
   try {
     if (sessionStorage.getItem('visit_logged')) return;
